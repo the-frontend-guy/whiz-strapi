@@ -535,7 +535,8 @@
           "image_grid_1",
           "image_grid_2",
           "overlay",
-          "vertical_slider"
+          "vertical_slider",
+          "form_content"
         ],
         "properties": {
           "id": {
@@ -564,6 +565,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -574,6 +576,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -629,16 +634,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -770,24 +793,6 @@
                     },
                     "link": {
                       "type": "string"
-                    },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     },
                     "order": {
                       "type": "integer",
@@ -1275,7 +1280,8 @@
           "image_grid_1",
           "image_grid_2",
           "overlay",
-          "vertical_slider"
+          "vertical_slider",
+          "form_content"
         ],
         "properties": {
           "banner": {
@@ -1301,6 +1307,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -1311,6 +1318,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -1366,16 +1376,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -1507,24 +1535,6 @@
                     },
                     "link": {
                       "type": "string"
-                    },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     },
                     "order": {
                       "type": "integer",

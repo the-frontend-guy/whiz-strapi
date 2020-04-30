@@ -645,7 +645,8 @@
               "image_grid_1",
               "image_grid_2",
               "overlay",
-              "vertical_slider"
+              "vertical_slider",
+              "form_content"
             ],
             "properties": {
               "id": {

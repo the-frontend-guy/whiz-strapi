@@ -45,8 +45,8 @@
       "type": "text"
     },
     "service_detail": {
-      "model": "service-detail",
-      "via": "page"
+      "via": "page",
+      "model": "service-detail"
     }
   }
 }

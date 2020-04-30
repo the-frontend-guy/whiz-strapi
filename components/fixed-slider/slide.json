@@ -6,6 +6,12 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading",
+      "required": true
+    },
     "content_show": {
       "type": "text",
       "required": true
@@ -33,12 +39,6 @@
     },
     "link": {
       "type": "string",
-      "required": true
-    },
-    "title": {
-      "type": "component",
-      "repeatable": true,
-      "component": "static.heading",
       "required": true
     },
     "order": {

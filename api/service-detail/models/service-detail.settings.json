@@ -48,11 +48,12 @@
     "form_content": {
       "type": "component",
       "repeatable": false,
-      "component": "form.content"
+      "component": "form.content",
+      "required": true
     },
     "page": {
-      "via": "service_detail",
-      "model": "page"
+      "model": "page",
+      "via": "service_detail"
     }
   }
 }

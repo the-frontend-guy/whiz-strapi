@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/01/2020 1:35:39 AM"
+    "x-generation-date": "05/01/2020 2:05:17 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3556,6 +3556,7 @@
           "banner",
           "about_us",
           "fixed_slider",
+          "circle_slider",
           "horizontal_slider",
           "overlay",
           "form_content"
@@ -3647,6 +3648,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -3657,6 +3659,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -3712,16 +3717,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -3854,24 +3877,6 @@
                     "link": {
                       "type": "string"
                     },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
                     "order": {
                       "type": "integer",
                       "default": 1
@@ -3926,7 +3931,6 @@
                   "required": [
                     "id",
                     "heading",
-                    "sub_heading",
                     "content",
                     "image",
                     "order"
@@ -4197,6 +4201,7 @@
           "banner",
           "about_us",
           "fixed_slider",
+          "circle_slider",
           "horizontal_slider",
           "overlay",
           "form_content"
@@ -4285,6 +4290,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -4295,6 +4301,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -4350,16 +4359,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -4492,24 +4519,6 @@
                     "link": {
                       "type": "string"
                     },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
                     "order": {
                       "type": "integer",
                       "default": 1
@@ -4564,7 +4573,6 @@
                   "required": [
                     "id",
                     "heading",
-                    "sub_heading",
                     "content",
                     "image",
                     "order"
@@ -4961,7 +4969,8 @@
               "image_grid_1",
               "image_grid_2",
               "overlay",
-              "vertical_slider"
+              "vertical_slider",
+              "form_content"
             ],
             "properties": {
               "id": {
@@ -5045,7 +5054,8 @@
           "image_grid_1",
           "image_grid_2",
           "overlay",
-          "vertical_slider"
+          "vertical_slider",
+          "form_content"
         ],
         "properties": {
           "id": {
@@ -5074,6 +5084,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -5084,6 +5095,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -5139,16 +5153,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -5280,24 +5312,6 @@
                     },
                     "link": {
                       "type": "string"
-                    },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     },
                     "order": {
                       "type": "integer",
@@ -5785,7 +5799,8 @@
           "image_grid_1",
           "image_grid_2",
           "overlay",
-          "vertical_slider"
+          "vertical_slider",
+          "form_content"
         ],
         "properties": {
           "banner": {
@@ -5811,6 +5826,7 @@
             "required": [
               "id",
               "heading_title",
+              "content",
               "heading_show",
               "skip_link",
               "theme",
@@ -5821,6 +5837,9 @@
                 "type": "string"
               },
               "heading_title": {
+                "type": "string"
+              },
+              "content": {
                 "type": "string"
               },
               "heading_show": {
@@ -5876,16 +5895,34 @@
                   "type": "object",
                   "required": [
                     "id",
+                    "title",
                     "content_show",
                     "active_icon",
                     "inactive_icon",
                     "link",
-                    "title",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
+                    },
+                    "title": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "content_show": {
                       "type": "string"
@@ -6017,24 +6054,6 @@
                     },
                     "link": {
                       "type": "string"
-                    },
-                    "title": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     },
                     "order": {
                       "type": "integer",

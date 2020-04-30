@@ -30,7 +30,8 @@
     "circle_slider": {
       "type": "component",
       "repeatable": false,
-      "component": "circle-slider.content"
+      "component": "circle-slider.content",
+      "required": true
     },
     "horizontal_slider": {
       "type": "component",
