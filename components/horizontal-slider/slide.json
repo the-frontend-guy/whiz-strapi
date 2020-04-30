@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_horizontal_slider_slides",
+  "info": {
+    "name": "slide",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    }
+  }
+}

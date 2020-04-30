@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_banner_banners",
+  "info": {
+    "name": "banner",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

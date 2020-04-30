@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_details",
+  "info": {
+    "name": "service-detail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.banner",
+      "required": true
+    },
+    "fixed_slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fixed-slider.content",
+      "required": true
+    },
+    "image_grid_1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image-grid.content",
+      "required": true
+    },
+    "image_grid_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image-grid.content",
+      "required": true
+    },
+    "overlay": {
+      "type": "component",
+      "repeatable": false,
+      "component": "overlay.content",
+      "required": true
+    },
+    "vertical_slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "vertical-slider.component",
+      "required": true
+    },
+    "form_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form.content"
+    },
+    "page": {
+      "via": "service_detail",
+      "model": "page"
+    }
+  }
+}

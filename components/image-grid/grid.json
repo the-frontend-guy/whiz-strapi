@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_image_grid_grids",
+  "info": {
+    "name": "grid",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    }
+  }
+}

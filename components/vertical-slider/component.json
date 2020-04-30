@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_vertical_slider_components",
+  "info": {
+    "name": "content",
+    "icon": "angle-double-left"
+  },
+  "options": {},
+  "attributes": {
+    "skip_link": {
+      "type": "string",
+      "required": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light",
+      "required": true
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vertical-slider.slide",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_static_text_sliders",
+  "info": {
+    "name": "text-slider",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "slider_title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

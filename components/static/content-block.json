@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_static_content_blocks",
+  "info": {
+    "name": "content-block",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "heading_title": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.link"
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "multitext_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.text-slider",
+      "max": 2
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_fixed_slider_slides",
+  "info": {
+    "name": "slide",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "content_show": {
+      "type": "text",
+      "required": true
+    },
+    "content_hide": {
+      "type": "text"
+    },
+    "active_icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "inactive_icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  }
+}

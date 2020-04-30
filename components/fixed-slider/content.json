@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_fixed_slider_contents",
+  "info": {
+    "name": "content",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "heading_title": {
+      "type": "string",
+      "required": true
+    },
+    "heading_show": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "static.heading"
+    },
+    "heading_hide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading"
+    },
+    "skip_link": {
+      "type": "string",
+      "required": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light",
+      "required": true
+    },
+    "slides":{
+      "type": "component",
+      "required":true,
+      "repeatable": true,
+      "component":"fixed-slider.slide"
+    }
+  }
+}

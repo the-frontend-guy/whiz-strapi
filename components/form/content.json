@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_form_contents",
+  "info": {
+    "name": "content",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

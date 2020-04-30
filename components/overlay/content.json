@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_overlay_contents",
+  "info": {
+    "name": "content",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "overlay_text": {
+      "type": "string",
+      "required": true
+    },
+    "banner_text": {
+      "type": "string"
+    }
+  }
+}

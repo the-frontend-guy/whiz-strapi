@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_static_headings",
+  "info": {
+    "name": "heading",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

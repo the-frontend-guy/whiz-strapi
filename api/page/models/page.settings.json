@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 1
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "children": {
+      "collection": "page",
+      "via": "parent"
+    },
+    "parent": {
+      "model": "page",
+      "via": "children"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_detail": {
+      "model": "service-detail",
+      "via": "page"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_horizontal_slider_contents",
+  "info": {
+    "name": "content",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading",
+      "required": true
+    },
+    "sub_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.heading"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light",
+      "required": true
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "horizontal-slider.slide",
+      "required": true
+    }
+  }
+}

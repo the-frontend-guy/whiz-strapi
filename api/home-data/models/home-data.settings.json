@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_data",
+  "info": {
+    "name": "home-data"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.banner",
+      "required": true
+    },
+    "about_us": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.content-block",
+      "required": true
+    },
+    "fixed_slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fixed-slider.content",
+      "required": true
+    },
+    "circle_slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "circle-slider.content"
+    },
+    "horizontal_slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "horizontal-slider.content",
+      "required": true
+    },
+    "overlay": {
+      "type": "component",
+      "repeatable": false,
+      "component": "overlay.content",
+      "required": true
+    },
+    "form_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form.content",
+      "required": true
+    }
+  }
+}

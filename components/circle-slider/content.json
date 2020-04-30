@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_circle_slider_contents",
+  "info": {
+    "name": "content",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading",
+      "required": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light",
+      "required": true
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "circle-slider.slides",
+      "required": true
+    }
+  }
+}
