@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "service_details",
+  "collectionName": "service_child_details",
   "info": {
-    "name": "service-detail"
+    "name": "Service-Child-Detail"
   },
   "options": {
     "increments": true,
@@ -12,47 +12,36 @@
     "banner": {
       "type": "component",
       "repeatable": false,
-      "component": "static.banner",
-      "required": true
+      "component": "static.banner"
     },
     "fixed_slider": {
       "type": "component",
       "repeatable": false,
-      "component": "fixed-slider.content",
-      "required": true
+      "component": "fixed-slider.content"
     },
     "image_grid_1": {
       "type": "component",
       "repeatable": false,
-      "component": "image-grid.content",
-      "required": true
+      "component": "image-grid.content"
     },
     "image_grid_2": {
       "type": "component",
       "repeatable": false,
-      "component": "image-grid.content",
-      "required": true
+      "component": "image-grid.content"
     },
-    "vertical_slider": {
+    "horizontal_slider": {
       "type": "component",
       "repeatable": false,
-      "component": "vertical-slider.component",
-      "required": true
+      "component": "horizontal-slider.content"
     },
     "form_content": {
       "type": "component",
       "repeatable": false,
-      "component": "form.content",
-      "required": true
+      "component": "form.content"
     },
     "page": {
       "model": "page",
-      "via": "service_detail"
-    },
-    "overlay": {
-      "type": "component",
-      "repeatable": false,
-      "component": "overlay.content"
+      "via": "service_child_detail"
     }
   }
 }

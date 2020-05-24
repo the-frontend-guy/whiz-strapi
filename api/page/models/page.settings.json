@@ -33,13 +33,13 @@
       "default": true,
       "required": true
     },
-    "children": {
-      "collection": "page",
-      "via": "parent"
-    },
     "parent": {
       "model": "page",
       "via": "children"
+    },
+    "children": {
+      "collection": "page",
+      "via": "parent"
     },
     "description": {
       "type": "text"
@@ -47,6 +47,10 @@
     "service_detail": {
       "via": "page",
       "model": "service-detail"
+    },
+    "service_child_detail": {
+      "via": "page",
+      "model": "service-child-detail"
     }
   }
 }

@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/home-data": {
+    "/service-child-details": {
       "get": {
         "deprecated": false,
-        "description": "Find all the home-data's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve home-data document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Home-data"
+          "Service-child-detail"
         ],
         "parameters": [
           {
@@ -193,12 +193,12 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single home-data record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve home-data document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Home-data"
+          "Service-child-detail"
         ],
         "requestBody": {
           "description": "",
@@ -252,19 +252,220 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewHome-data"
+                "$ref": "#/components/schemas/NewService-child-detail"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/service-child-details/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Service-child-detail"
+        ],
         "parameters": []
+      }
+    },
+    "/service-child-details/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Service-child-detail"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Service-child-detail"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewService-child-detail"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single home-data record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single home-data based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,23 +508,28 @@
         },
         "summary": "",
         "tags": [
-          "Home-data"
+          "Service-child-detail"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "Home-data": {
+      "Service-child-detail": {
         "required": [
-          "id",
-          "banner",
-          "about_us",
-          "fixed_slider",
-          "circle_slider",
-          "horizontal_slider",
-          "form_content"
+          "id"
         ],
         "properties": {
           "id": {
@@ -347,66 +553,6 @@
               }
             }
           },
-          "about_us": {
-            "type": "object",
-            "required": [
-              "id",
-              "title",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "heading_title": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "link": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "name",
-                  "url"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  }
-                }
-              },
-              "content": {
-                "type": "string"
-              },
-              "multitext_slider": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "slider_title"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "slider_title": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "maxItems": 2
-              }
-            }
-          },
           "fixed_slider": {
             "type": "object",
             "required": [
@@ -650,13 +796,13 @@
               }
             }
           },
-          "circle_slider": {
+          "image_grid_1": {
             "type": "object",
             "required": [
               "id",
               "heading",
               "theme",
-              "slides"
+              "grids"
             ],
             "properties": {
               "id": {
@@ -680,6 +826,21 @@
                   }
                 }
               },
+              "sub_heading": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
               "theme": {
                 "type": "string",
                 "default": "light",
@@ -688,31 +849,20 @@
                   "dark"
                 ]
               },
-              "slides": {
+              "grids": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
-                    "heading",
-                    "content",
-                    "image",
+                    "icon",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
-                      "type": "string"
-                    },
-                    "sub_heading": {
-                      "type": "string"
-                    },
-                    "content": {
-                      "type": "string"
-                    },
-                    "image": {
+                    "icon": {
                       "required": [
                         "id",
                         "name",
@@ -772,6 +922,148 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "order": {
+                      "type": "integer",
+                      "default": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "image_grid_2": {
+            "type": "object",
+            "required": [
+              "id",
+              "heading",
+              "theme",
+              "grids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "sub_heading": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "theme": {
+                "type": "string",
+                "default": "light",
+                "enum": [
+                  "light",
+                  "dark"
+                ]
+              },
+              "grids": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "icon",
+                    "order"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "title": {
+                      "type": "string"
                     },
                     "order": {
                       "type": "integer",
@@ -940,34 +1232,56 @@
               }
             }
           },
-          "overlay": {
-            "type": "object",
+          "page": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "slug",
+              "title",
+              "active"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "overlay_text": {
+              "name": {
                 "type": "string"
               },
-              "banner_text": {
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "service_detail": {
+                "type": "string"
+              },
+              "service_child_detail": {
                 "type": "string"
               }
             }
           }
         }
       },
-      "NewHome-data": {
-        "required": [
-          "banner",
-          "about_us",
-          "fixed_slider",
-          "circle_slider",
-          "horizontal_slider",
-          "form_content"
-        ],
+      "NewService-child-detail": {
         "properties": {
           "banner": {
             "type": "object",
@@ -987,66 +1301,6 @@
               }
             }
           },
-          "about_us": {
-            "type": "object",
-            "required": [
-              "id",
-              "title",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "heading_title": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "link": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "name",
-                  "url"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  }
-                }
-              },
-              "content": {
-                "type": "string"
-              },
-              "multitext_slider": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "slider_title"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "slider_title": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "maxItems": 2
-              }
-            }
-          },
           "fixed_slider": {
             "type": "object",
             "required": [
@@ -1290,13 +1544,13 @@
               }
             }
           },
-          "circle_slider": {
+          "image_grid_1": {
             "type": "object",
             "required": [
               "id",
               "heading",
               "theme",
-              "slides"
+              "grids"
             ],
             "properties": {
               "id": {
@@ -1320,6 +1574,21 @@
                   }
                 }
               },
+              "sub_heading": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
               "theme": {
                 "type": "string",
                 "default": "light",
@@ -1328,31 +1597,20 @@
                   "dark"
                 ]
               },
-              "slides": {
+              "grids": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
-                    "heading",
-                    "content",
-                    "image",
+                    "icon",
                     "order"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
-                      "type": "string"
-                    },
-                    "sub_heading": {
-                      "type": "string"
-                    },
-                    "content": {
-                      "type": "string"
-                    },
-                    "image": {
+                    "icon": {
                       "required": [
                         "id",
                         "name",
@@ -1412,6 +1670,148 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "order": {
+                      "type": "integer",
+                      "default": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "image_grid_2": {
+            "type": "object",
+            "required": [
+              "id",
+              "heading",
+              "theme",
+              "grids"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "sub_heading": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "theme": {
+                "type": "string",
+                "default": "light",
+                "enum": [
+                  "light",
+                  "dark"
+                ]
+              },
+              "grids": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "icon",
+                    "order"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "title": {
+                      "type": "string"
                     },
                     "order": {
                       "type": "integer",
@@ -1580,22 +1980,8 @@
               }
             }
           },
-          "overlay": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "overlay_text": {
-                "type": "string"
-              },
-              "banner_text": {
-                "type": "string"
-              }
-            }
+          "page": {
+            "type": "string"
           }
         }
       }

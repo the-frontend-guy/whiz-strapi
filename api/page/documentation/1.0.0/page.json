@@ -543,6 +543,53 @@
             "type": "boolean",
             "default": true
           },
+          "parent": {
+            "required": [
+              "id",
+              "name",
+              "slug",
+              "title",
+              "active"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "service_detail": {
+                "type": "string"
+              },
+              "service_child_detail": {
+                "type": "string"
+              }
+            }
+          },
           "children": {
             "type": "array",
             "items": {
@@ -572,65 +619,24 @@
                 "active": {
                   "type": "boolean"
                 },
+                "parent": {
+                  "type": "string"
+                },
                 "children": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "parent": {
-                  "type": "string"
-                },
                 "description": {
                   "type": "string"
                 },
                 "service_detail": {
                   "type": "string"
-                }
-              }
-            }
-          },
-          "parent": {
-            "required": [
-              "id",
-              "name",
-              "slug",
-              "title",
-              "active"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "order": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "children": {
-                "type": "array",
-                "items": {
+                },
+                "service_child_detail": {
                   "type": "string"
                 }
-              },
-              "parent": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "service_detail": {
-                "type": "string"
               }
             }
           },
@@ -644,7 +650,6 @@
               "fixed_slider",
               "image_grid_1",
               "image_grid_2",
-              "overlay",
               "vertical_slider",
               "form_content"
             ],
@@ -664,10 +669,41 @@
               "image_grid_2": {
                 "type": "component"
               },
-              "overlay": {
+              "vertical_slider": {
                 "type": "component"
               },
-              "vertical_slider": {
+              "form_content": {
+                "type": "component"
+              },
+              "page": {
+                "type": "string"
+              },
+              "overlay": {
+                "type": "component"
+              }
+            }
+          },
+          "service_child_detail": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "banner": {
+                "type": "component"
+              },
+              "fixed_slider": {
+                "type": "component"
+              },
+              "image_grid_1": {
+                "type": "component"
+              },
+              "image_grid_2": {
+                "type": "component"
+              },
+              "horizontal_slider": {
                 "type": "component"
               },
               "form_content": {
@@ -705,19 +741,22 @@
             "type": "boolean",
             "default": true
           },
+          "parent": {
+            "type": "string"
+          },
           "children": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "parent": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
           "service_detail": {
+            "type": "string"
+          },
+          "service_child_detail": {
             "type": "string"
           }
         }

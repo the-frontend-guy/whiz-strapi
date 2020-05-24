@@ -534,7 +534,6 @@
           "fixed_slider",
           "image_grid_1",
           "image_grid_2",
-          "overlay",
           "vertical_slider",
           "form_content"
         ],
@@ -1081,24 +1080,6 @@
               }
             }
           },
-          "overlay": {
-            "type": "object",
-            "required": [
-              "id",
-              "overlay_text"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "overlay_text": {
-                "type": "string"
-              },
-              "banner_text": {
-                "type": "string"
-              }
-            }
-          },
           "vertical_slider": {
             "type": "object",
             "required": [
@@ -1254,19 +1235,39 @@
               "active": {
                 "type": "boolean"
               },
+              "parent": {
+                "type": "string"
+              },
               "children": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "parent": {
-                "type": "string"
-              },
               "description": {
                 "type": "string"
               },
               "service_detail": {
+                "type": "string"
+              },
+              "service_child_detail": {
+                "type": "string"
+              }
+            }
+          },
+          "overlay": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "overlay_text": {
+                "type": "string"
+              },
+              "banner_text": {
                 "type": "string"
               }
             }
@@ -1279,7 +1280,6 @@
           "fixed_slider",
           "image_grid_1",
           "image_grid_2",
-          "overlay",
           "vertical_slider",
           "form_content"
         ],
@@ -1823,24 +1823,6 @@
               }
             }
           },
-          "overlay": {
-            "type": "object",
-            "required": [
-              "id",
-              "overlay_text"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "overlay_text": {
-                "type": "string"
-              },
-              "banner_text": {
-                "type": "string"
-              }
-            }
-          },
           "vertical_slider": {
             "type": "object",
             "required": [
@@ -1971,6 +1953,23 @@
           },
           "page": {
             "type": "string"
+          },
+          "overlay": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "overlay_text": {
+                "type": "string"
+              },
+              "banner_text": {
+                "type": "string"
+              }
+            }
           }
         }
       }

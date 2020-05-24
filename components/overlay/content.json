@@ -7,11 +7,10 @@
   "options": {},
   "attributes": {
     "overlay_text": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "banner_text": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
