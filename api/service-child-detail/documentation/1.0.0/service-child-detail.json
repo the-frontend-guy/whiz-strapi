@@ -1221,13 +1221,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -1969,13 +1972,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }

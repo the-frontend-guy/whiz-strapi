@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_banner_texts",
+  "info": {
+    "name": "banner-text",
+    "icon": "angle-double-up"
+  },
+  "options": {},
+  "attributes": {
+    "pre_blue": {
+      "type": "string"
+    },
+    "blue": {
+      "type": "string"
+    },
+    "post_blue": {
+      "type": "string"
+    },
+    "banner_desc": {
+      "type": "string"
+    }
+  }
+}

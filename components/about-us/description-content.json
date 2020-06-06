@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_about_us_description_contents",
+  "info": {
+    "name": "description-content",
+    "icon": "angle-left"
+  },
+  "options": {},
+  "attributes": {
+    "sub_heading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description_show": {
+      "type": "text"
+    },
+    "read_more": {
+      "type": "string"
+    },
+    "description_hide": {
+      "type": "text"
+    }
+  }
+}

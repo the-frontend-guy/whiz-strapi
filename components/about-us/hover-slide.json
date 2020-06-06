@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_us_hover_slides",
+  "info": {
+    "name": "hover-slide",
+    "icon": "angle-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

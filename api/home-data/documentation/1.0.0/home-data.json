@@ -929,13 +929,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -954,6 +957,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -1569,13 +1596,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -1594,6 +1624,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }

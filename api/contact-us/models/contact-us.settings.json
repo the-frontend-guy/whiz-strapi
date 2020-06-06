@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "name": "contact-us"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "form_heading": {
+      "type": "string"
+    },
+    "form_description": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading"
+    }
+  }
+}

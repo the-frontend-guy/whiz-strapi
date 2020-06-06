@@ -6,9 +6,12 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "form_heading": {
       "type": "string",
       "required": true
+    },
+    "form_description": {
+      "type": "text"
     }
   }
 }

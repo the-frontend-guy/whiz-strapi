@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "aboutus_data",
+  "info": {
+    "name": "aboutus-data"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.banner-text"
+    },
+    "popup_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.banner"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.description-content"
+    },
+    "overlay": {
+      "type": "component",
+      "repeatable": false,
+      "component": "overlay.content"
+    },
+    "aboutus_hoverslides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.hover-slide"
+    },
+    "next_page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static.link"
+    },
+    "form_component": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form.content"
+    }
+  }
+}

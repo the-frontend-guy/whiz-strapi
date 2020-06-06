@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/10/2020 1:41:12 AM"
+    "x-generation-date": "06/07/2020 2:50:14 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,6 +45,630 @@
     }
   ],
   "paths": {
+    "/aboutus-data": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the aboutus-data's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve aboutus-data document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Aboutus-data"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single aboutus-data record",
+        "responses": {
+          "200": {
+            "description": "Retrieve aboutus-data document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Aboutus-data"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewAboutus-data"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single aboutus-data record",
+        "responses": {
+          "200": {
+            "description": "deletes a single aboutus-data based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Aboutus-data"
+        ],
+        "parameters": []
+      }
+    },
+    "/contact-us": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the contact-us's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve contact-us document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contact-us"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single contact-us record",
+        "responses": {
+          "200": {
+            "description": "Retrieve contact-us document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contact-us"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewContact-us"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single contact-us record",
+        "responses": {
+          "200": {
+            "description": "deletes a single contact-us based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Contact-us"
+        ],
+        "parameters": []
+      }
+    },
     "/home-data": {
       "get": {
         "deprecated": false,
@@ -3426,7 +4050,7 @@
     "/auth/reset-password": {
       "post": {
         "deprecated": false,
-        "description": "Change a user's password",
+        "description": "Reset user password with a code (resetToken)",
         "responses": {
           "200": {
             "description": "response",
@@ -4074,6 +4698,546 @@
   },
   "components": {
     "schemas": {
+      "Aboutus-data": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "banner": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "pre_blue": {
+                "type": "string"
+              },
+              "blue": {
+                "type": "string"
+              },
+              "post_blue": {
+                "type": "string"
+              },
+              "banner_desc": {
+                "type": "string"
+              }
+            }
+          },
+          "popup_slider": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "heading"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "heading": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "description": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sub_heading": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "string"
+              },
+              "description_show": {
+                "type": "string"
+              },
+              "read_more": {
+                "type": "string"
+              },
+              "description_hide": {
+                "type": "string"
+              }
+            }
+          },
+          "overlay": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "overlay_text": {
+                "type": "string"
+              },
+              "banner_text": {
+                "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "aboutus_hoverslides": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "img": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "next_page": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "form_component": {
+            "type": "object",
+            "required": [
+              "id",
+              "form_heading"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "NewAboutus-data": {
+        "properties": {
+          "banner": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "pre_blue": {
+                "type": "string"
+              },
+              "blue": {
+                "type": "string"
+              },
+              "post_blue": {
+                "type": "string"
+              },
+              "banner_desc": {
+                "type": "string"
+              }
+            }
+          },
+          "popup_slider": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "heading"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "heading": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "description": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sub_heading": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "string"
+              },
+              "description_show": {
+                "type": "string"
+              },
+              "read_more": {
+                "type": "string"
+              },
+              "description_hide": {
+                "type": "string"
+              }
+            }
+          },
+          "overlay": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "overlay_text": {
+                "type": "string"
+              },
+              "banner_text": {
+                "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "aboutus_hoverslides": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "img": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "next_page": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
+          "form_component": {
+            "type": "object",
+            "required": [
+              "id",
+              "form_heading"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "Contact-us": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "form_heading": {
+            "type": "string"
+          },
+          "form_description": {
+            "type": "string"
+          },
+          "tagline": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewContact-us": {
+        "properties": {
+          "heading": {
+            "type": "string"
+          },
+          "form_heading": {
+            "type": "string"
+          },
+          "form_description": {
+            "type": "string"
+          },
+          "tagline": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
       "Home-data": {
         "required": [
           "id",
@@ -4688,13 +5852,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -4713,6 +5880,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -5328,13 +6519,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -5353,6 +6547,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -6299,13 +7517,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -7047,13 +8268,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -7733,13 +8957,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -7805,6 +9032,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -8476,13 +9727,16 @@
             "type": "object",
             "required": [
               "id",
-              "title"
+              "form_heading"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "title": {
+              "form_heading": {
+                "type": "string"
+              },
+              "form_description": {
                 "type": "string"
               }
             }
@@ -8504,6 +9758,30 @@
               },
               "banner_text": {
                 "type": "string"
+              },
+              "vertical_text": {
+                "type": "string"
+              },
+              "desc_heading": {
+                "type": "string"
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }

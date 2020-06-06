@@ -11,6 +11,17 @@
     },
     "banner_text": {
       "type": "text"
+    },
+    "vertical_text": {
+      "type": "string"
+    },
+    "desc_heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading"
     }
   }
 }
