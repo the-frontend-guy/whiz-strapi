@@ -26,6 +26,9 @@
       "repeatable": true,
       "component": "circle-slider.slides",
       "required": true
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
