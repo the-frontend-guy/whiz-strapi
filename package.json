@@ -1,5 +1,5 @@
 {
-  "name": "whiz-api",
+  "name": "strapi-new",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -14,23 +14,22 @@
     "knex": "<0.20.0",
     "pg": "^8.2.1",
     "sqlite3": "latest",
-    "strapi": "3.0.0",
-    "strapi-admin": "3.0.0",
-    "strapi-connector-bookshelf": "3.0.0",
-    "strapi-plugin-content-manager": "3.0.0",
-    "strapi-plugin-content-type-builder": "3.0.0",
-    "strapi-plugin-documentation": "3.0.0",
-    "strapi-plugin-email": "3.0.0",
-    "strapi-plugin-graphql": "3.0.0",
-    "strapi-plugin-upload": "3.0.0",
-    "strapi-plugin-users-permissions": "3.0.0",
-    "strapi-utils": "3.0.0"
+    "strapi": "3.0.2",
+    "strapi-admin": "3.0.2",
+    "strapi-connector-bookshelf": "3.0.2",
+    "strapi-plugin-content-manager": "3.0.2",
+    "strapi-plugin-content-type-builder": "3.0.2",
+    "strapi-plugin-email": "3.0.2",
+    "strapi-plugin-graphql": "^3.0.2",
+    "strapi-plugin-upload": "3.0.2",
+    "strapi-plugin-users-permissions": "3.0.2",
+    "strapi-utils": "3.0.2"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "2680895d-fb9e-4420-b13f-a8b0394ad237"
+    "uuid": "6e960fd3-34d6-4dd3-8a36-f74926a7feb2"
   },
   "engines": {
     "node": ">=10.0.0",
