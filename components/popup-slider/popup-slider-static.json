@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_popup_slider_popup_slider_statics",
+  "info": {
+    "name": "popup-slider-static",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "sub_heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "footer_question": {
+      "type": "string"
+    },
+    "footer_ans": {
+      "type": "string"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "popup_title": {
+      "type": "string"
+    }
+  }
+}

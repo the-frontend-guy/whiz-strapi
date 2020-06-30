@@ -9,13 +9,16 @@
     "pre_blue": {
       "type": "string"
     },
-    "blue": {
+    "blue1": {
       "type": "string"
     },
     "post_blue": {
       "type": "string"
     },
     "banner_desc": {
+      "type": "string"
+    },
+    "blue2": {
       "type": "string"
     }
   }

@@ -49,6 +49,11 @@
       "type": "component",
       "repeatable": false,
       "component": "overlay.content"
+    },
+    "popup_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "popup-slider.popup-slider-static"
     }
   }
 }

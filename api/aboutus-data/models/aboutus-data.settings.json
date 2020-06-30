@@ -14,11 +14,6 @@
       "repeatable": false,
       "component": "about-us.banner-text"
     },
-    "popup_slider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "static.banner"
-    },
     "description": {
       "type": "component",
       "repeatable": false,
@@ -39,10 +34,15 @@
       "repeatable": false,
       "component": "static.link"
     },
-    "form_component": {
+    "form_content": {
       "type": "component",
       "repeatable": false,
       "component": "form.content"
+    },
+    "multi_text_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.text-slider"
     }
   }
 }
