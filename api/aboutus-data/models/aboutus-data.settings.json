@@ -24,11 +24,6 @@
       "repeatable": false,
       "component": "overlay.content"
     },
-    "aboutus_hoverslides": {
-      "type": "component",
-      "repeatable": true,
-      "component": "about-us.hover-slide"
-    },
     "next_page": {
       "type": "component",
       "repeatable": false,
