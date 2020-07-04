@@ -39,6 +39,17 @@
     },
     "popup_title": {
       "type": "string"
+    },
+    "mobile_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

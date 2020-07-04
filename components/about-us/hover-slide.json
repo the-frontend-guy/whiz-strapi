@@ -22,6 +22,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slider_text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "static.heading"
     }
   }
 }
