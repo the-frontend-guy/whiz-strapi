@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
   // ...
   email: {
-    provider: 'Nodemailer Gmail OAuth2',
+    provider: 'gmail-oauth2',
     config: {
       username: 'vikas',
       clientId: '428733288893-qhlhpdc48543equu1mgdq6jd50gtvqhi.apps.googleusercontent.com',
