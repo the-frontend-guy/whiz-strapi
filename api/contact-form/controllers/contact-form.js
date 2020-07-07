@@ -14,7 +14,7 @@ module.exports = {
     } else {
       entity = await strapi.services[modelName].create(ctx.request.body);
     }
-    await strapi.plugins["email"].services.email.send({
+  await strapi.plugins["email"].services.email.send({
       to: "info@whizwafture.com",
       from: "vikas.p@bewdigital.com",
       subject: "Whizwafture - New Enquiry",
@@ -31,44 +31,8 @@ module.exports = {
 <p style="margin:0px;font-stretch:normal;line-height:normal"><font face="arial, sans-serif">Regards,</font></p>
 <p style="margin:0px;font-stretch:normal;line-height:normal"><font face="arial, sans-serif">Whizwafture - Website</font></p><p style="margin:0px;font-stretch:normal;line-height:normal"><font face="arial, sans-serif"><br></font></p><p style="margin:0px;font-stretch:normal;line-height:normal"><font face="arial, sans-serif"><br></font></p></div></div></div><div class="yj6qo"></div><div class="adL">
 </div></div></div>`,
-      // html: `
-      // <div>Hi Team,</div>
-      // <div>Greetings for the day!!!</div>
-      // <div>Here is a new enquiry for you. Below are the details : </div>
-      // <table>
-      // <tbody>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Id</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.id}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Name</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.name}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Email</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.email}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Phone</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.phone}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Description</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.description}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">Services</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.services}</td>
-      // </tr>
-      // <tr>
-      // <td style="padding: 1rem; border: 1px solid;">File</td>
-      // <td style="padding: 1rem; border: 1px solid;">${entity.uploaded_file ? 'Yes' : 'No'}</td>
-      // </tr>
-      // </tbody>
-      // </table>
-      // `
-    });
+    })
+
     return sanitizeEntity(entity, { model: strapi.models[modelName] });
   },
 };
