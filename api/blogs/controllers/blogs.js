@@ -51,20 +51,16 @@ module.exports = {
     let next = null;
     let suggested = [];
 
-
-
     if (categoryIds.length > 1 && currentIdPosition) {
       previous = entityCategoryBlogs.filter(
-        e => e.id === categoryIds[currentIdPosition - 1]
+        (e) => e.id === categoryIds[currentIdPosition - 1]
       )[0];
     }
 
-    if (
-      categoryIds.length > 1 &&
-      currentIdPosition <= categoryIds.length - 2
-    ) {
-      next = entityCategoryBlogs.filter((e) => e.id === categoryIds[currentIdPosition + 1])[0];
-
+    if (categoryIds.length > 1 && currentIdPosition <= categoryIds.length - 2) {
+      next = entityCategoryBlogs.filter(
+        (e) => e.id === categoryIds[currentIdPosition + 1]
+      )[0];
     }
 
     removeElement(categoryIds, entity.id);
@@ -72,7 +68,6 @@ module.exports = {
     if (previous) {
       removeElement(categoryIds, previous.id);
     }
-
 
     if (next) {
       removeElement(categoryIds, next.id);
@@ -92,13 +87,59 @@ module.exports = {
       }
     }
 
-    
     return {
       blogData: sanitizeEntity(entity, { model: strapi.models.blogs }),
-      prev: previous ? sanitizeEntity(previous, { model: strapi.models.blogs }) : null,
+      prev: previous
+        ? sanitizeEntity(previous, { model: strapi.models.blogs })
+        : null,
       next: next ? sanitizeEntity(next, { model: strapi.models.blogs }) : null,
-      suggested: suggested.length ? suggested.map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.blogs })) : null
+      suggested: suggested.length
+        ? suggested.map((entity) =>
+            sanitizeEntity(entity, { model: strapi.models.blogs })
+          )
+        : null,
+    };
+  },
+
+  async home(ctx) {
+    const categories = await strapi.services["blog-categories"].find(ctx.query);
+    const count = await strapi.services.blogs.count(ctx.query);
+    const blogs = [];
+    const categoriesId = categories.map((e) => e.id);
+    categoriesId.shift();
+
+    if (count) {
+      if (count <= 2 || categoriesId.length <= 1) {
+        blogs = await strapi.services.blogs.find({
+          _limit: 2,
+        });
+      } else {
+        shuffleArray(categoriesId);
+
+        const blog1 = await strapi.services.blogs.findOne({
+          "blog_category.category": categories.filter(
+            (e) => e.id === categoriesId[0]
+          )[0].category,
+          _limit: 1,
+        });
+
+        const blog2 = await strapi.services.blogs.findOne({
+          "blog_category.category": categories.filter(
+            (e) => e.id === categoriesId[1]
+          )[0].category,
+          _limit: 1,
+        });
+
+        blogs.push(blog1);
+        blogs.push(blog2);
+      }
+    }
+
+    return {
+      count: count,
+      articles: blogs.length && blogs.map((entity) =>
+        sanitizeEntity(entity, { model: strapi.models.blogs })
+      ),
     };
   },
 };
