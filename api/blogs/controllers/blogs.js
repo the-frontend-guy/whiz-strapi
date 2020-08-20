@@ -104,7 +104,7 @@ module.exports = {
   async home(ctx) {
     const categories = await strapi.services["blog-categories"].find(ctx.query);
     const count = await strapi.services.blogs.count(ctx.query);
-    const blogs = [];
+    let blogs = [];
     const categoriesId = categories.map((e) => e.id);
     categoriesId.shift();
 
