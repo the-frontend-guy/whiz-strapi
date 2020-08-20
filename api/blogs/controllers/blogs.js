@@ -42,6 +42,9 @@ module.exports = {
   async findOne(ctx) {
     const { id } = ctx.params;
     const entity = await strapi.services.blogs.findOne({ slug: id });
+    if(!entity){
+      return;
+    }
     const entityCategoryBlogs = await strapi.services.blogs.find({
       "blog_category.category": entity.blog_category.category,
     });
