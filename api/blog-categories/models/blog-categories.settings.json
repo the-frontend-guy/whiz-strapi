@@ -25,6 +25,14 @@
     "order": {
       "type": "integer",
       "default": 1
+    },
+    "service_detail": {
+      "via": "blog_category",
+      "model": "service-detail"
+    },
+    "service_child_detail": {
+      "via": "blog_category",
+      "model": "service-child-detail"
     }
   }
 }

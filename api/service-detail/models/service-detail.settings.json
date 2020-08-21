@@ -53,6 +53,10 @@
       "type": "component",
       "repeatable": false,
       "component": "overlay.content"
+    },
+    "blog_category": {
+      "model": "blog-categories",
+      "via": "service_detail"
     }
   }
 }
