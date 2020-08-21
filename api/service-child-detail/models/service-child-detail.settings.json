@@ -42,6 +42,10 @@
     "page": {
       "model": "page",
       "via": "service_child_detail"
+    },
+    "blog_category": {
+      "model": "blog-categories",
+      "via": "service_child_detail"
     }
   }
 }
